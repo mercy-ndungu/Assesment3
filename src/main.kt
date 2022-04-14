@@ -5,6 +5,10 @@ println(m.withdrawal(400.00))
     println(myIndexes("banana"))
     var save = SavingsAccount("", "", 5000.00,3 )
     println(save.withdrawal())
+    var c=Product("handkerchief", 5, 30, "hygiene")
+    var d=Product("cabbage",15,50,"groceries")
+    var e=Product("nails",200,1000,"other")
+println(listOf(c, d, e))
 }
 /*Create a class CurrentAccount with the following attributes: account
 number, account name, balance. It has the following functions:
@@ -58,19 +62,20 @@ class SavingsAccount(var accountNumber: String, var accountName: String, var bal
 weight, price, category. Category can either be groceries, hygiene or
 other. Write a function that takes in a product and uses a when
 statement to assign each product to a list based on its category*/
-fun myProducts(product: String){
-var lists = arrayListOf<Product>()
-        when(product){
+fun myProducts(product: Product){
+var hygienelst= mutableListOf<Product>()
+    var grocerieslst = mutableListOf<Product>()
+    var otherlst = mutableListOf<Product>()
+    when(product.category){
+        "groceries"-> hygienelst.add(product)
+        "hygiene"->grocerieslst.add(product)
+        "other"->otherlst.add(product)
+                }
+                println( listOf(product))
+
+            }
 
 
-
-
-
-
-        }
-
-
-}
 data class Product(var name: String,var weight: Int, var price:Int, var category:String){
 
 }
