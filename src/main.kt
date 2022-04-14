@@ -45,7 +45,7 @@ class SavingsAccount(var accountNumber: String, var accountName: String, var bal
     fun withdrawal(){
         if(withdrawals<4 ){
             withdrawals++
-            println("One withdrawal successful")
+            println("Withdrawal is now $withdrawals")
         }
         else{
             println("withdrawal not successful.")
@@ -58,9 +58,10 @@ class SavingsAccount(var accountNumber: String, var accountName: String, var bal
 weight, price, category. Category can either be groceries, hygiene or
 other. Write a function that takes in a product and uses a when
 statement to assign each product to a list based on its category*/
-fun myProducts(product: List<Product>){
+fun myProducts(product: String){
 var lists = arrayListOf<Product>()
         when(product){
+
 
 
 
